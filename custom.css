@@ -1,0 +1,80 @@
+#chatWhatsApp{
+    width: 64px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+/* HEADER */
+header {
+   background-image: url(./image/recursos/HEADER.jpg);
+   background-position: center;
+   background-size: cover;
+}
+
+/* BACKGROUD PAGINA */
+body {
+    background-color: rgb(8, 8, 8);
+    color: #0e1011;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* CARRITO */
+#imagencarritovacio {
+    width: 90%;
+        
+}
+#ventanacarrito span{
+    font-size: 1em;
+}
+
+/* PRODUCTOS */
+article {
+    margin-bottom: 2em;
+}
+
+article > picture > img {
+    max-width: 90% !important;
+    margin-bottom: 1em;
+
+}
+
+/* PRECIOS */
+.precioOriginal {
+    font-size: 1.5em;
+    color: rgb(117, 109, 109);
+    text-decoration: line-through;
+}
+
+.precioDescuento {
+    font-size: 1.5em;
+    color: black;
+    font-weight: bold;
+}
+
+.precioFinal {
+    font-size: 1.5em;
+    color: black;
+    text-decoration: line-through;
+}
+/*info videos */
+.info-video{ 
+    
+    font-size: x-small;
+    font-weight: 700;
+    text-align: center;
+color: #0b1622;
+}
+.video{
+    width: 350px;
+    margin-left: 10%;
+    height: 300px;
+    object-fit: cover;
+    transition: all .5s;
+
+   
+}
+

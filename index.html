@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Titulo de la pagina -->
+	<title>Inicio</title>
+
+	<!-- Estilo de Boostrap-->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+
+	<!-- Estilo de Iconos de Boostrap-->
+	<link rel="stylesheet" href="font/bootstrap-icons.css">
+
+
+	<!-- Conecta con el archivo de estilo -->
+	<link rel="stylesheet" href="custom.css">
+
+
+</head>
+
+<body>
+
+	<!-- WhatsApp -->
+	<a id="chatWhatsApp" target="_blank" href="https://wa.me/51953887475?text=Hola quisiera comprar ahora!">
+		<img src="image/recursos/whatsapp.png" alt="Iniciar convsersación por WhatsApp">
+	</a>
+
+
+	<!-- Encabezado -->
+	<header class="text-center bg-dark text-warning p-3">
+		<h1>Mazmorra Games</h1>
+		<h2>Seguridad, calidad y garantía</h2>
+	</header>
+	<!-- Barra de navegación -->
+	<nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
+		<div class="container">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contacto.html">Contacténos</a>
+					</li>
+				</ul>
+				<div class="d-flex">
+					<button class="btn btn-primary" data-bs-toggle="modal"
+						data-bs-target="#ventanaCarrito">Carrito</button>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- Ventana Modal del Carrito -->
+	<div class="modal fade" id="ventanaCarrito" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="exampleModalLabel">Carrito</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<picture> <img id="imagencarritovacio" class="img-fluid mx-auto d-block" src="image/recursos/carrito-vacio.png"
+							alt="carrito-vacio"></picture><br>
+					<p class="text-center">El Carrito está Vacío.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" onclick="limpiarCarrito()"><i class="bi bi-cart-x"></i> Limpiar</button>
+					<button type="button" class="btn btn-primary"><i class="bi bi-cart4"></i> Cotizar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!-- Notificacion 
+	<div id="notificacion">Venta de productos</div>
+	<br>
+    -->
+
+	<!-- Contenido principal y contenedor de productos -->
+
+	<main
+		class="container text-center bg-warning text-primary-emphasis text-capitalize fs-5 border-primary-subtle rounded-3">
+
+		<!-- Sesion de Contenido-->
+		<section id="catalogo" class="row py-4">
+
+			<!-- Producto 1 -->
+
+			<article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+				<!-- imagen del producto -->
+				<picture>
+					<img class="img-fluid" src="image/productos/producto1.jpg"
+						alt="D&D MINIATURE: VAN RICHTENS GUIDE TO RAVENLOFT" />
+				</picture>
+				<!-- informacion y precio -->
+
+				<center>
+					<h4>D&D Miniauture: Van Richtens Guide To Ravenloft</h4>
+					<p> <span class="precio">$109.99</span>
+					</p>
+				</center>
+
+				<!-- boton para añadir al carrito -->
+				<button onclick="addCarrito(event)" class="btn btn-dark"><i class="bi bi-bag-plus-fill"></i> Añadir al carrito</button>
+			</article>
+			<br>
+
+
+			<!-- FIN DEL PRODUCTO 1 -->
+
+			<!-- Producto 2 -->
+
+			<article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+				<!-- imagen del producto -->
+				<picture>
+					<img class="img-fluid" src="image/productos/producto2.jpg"
+						alt="D&D 5TH ED. EL CALDERO DE TASHA PARA TODO" />
+				</picture>
+				<!-- informacion y precio -->
+
+				<center>
+					<h4>D&D 5TH ED. El Caldero De Tasha Para Todo</h4>
+					<br>
+					<p class="precio">$1172.00</p>
+				</center>
+
+				<!-- boton para añadir al carrito -->
+				<button onclick="addCarrito(event)"  class="btn btn-dark"><i class="bi bi-bag-plus-fill"></i> Añadir al carrito</button>
+			</article>
+			<!-- FIN DEL PRODUCTO 2 -->
+
+			<!-- Producto 3 -->
+
+			<article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+				<!-- imagen del producto -->
+				<picture>
+					<img class="img-fluid" src="image/productos/producto3.jpg"
+						alt="D&D 5TH ED. CORE GIFT SET (ESPAÑOL)" />
+				</picture>
+				<!-- informacion y precio -->
+				<div class="info-producto">
+					<center>
+						<h4>D&D 5TH ED. Core Gift Set (Español)</h4>
+						<br>
+						<p class="precio">$709.99</p>
+					</center>
+					<!-- boton para añadir al carrito -->
+					<button onclick="addCarrito(event)"  class="btn btn-dark"><i class="bi bi-bag-plus-fill"></i> Añadir al carrito</button>
+			</article>
+			<br>
+			<!-- FIN DEL PRODUCTO 3 -->
+
+			<!-- Producto 4 -->
+
+			<article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+				<!-- imagen del producto -->
+				<picture>
+					<img class="img-fluid" src="image/productos/PRODUCTO4.jpg"
+						alt="D&D 5TH ED. CAMPAIGN CASE: TERRAIN" />
+				</picture>
+				<!-- informacion y precio -->
+				<div class="info-producto">
+					<center>
+						<h4>JD&D 5TH ED. <br> Campaing Case: <br> Terrain</h4>
+						<p class="precio">$339.99</p>
+					</center>
+					<!-- boton para añadir al carrito -->
+					<button onclick="addCarrito(event)"  class="btn btn-dark"><i class="bi bi-bag-plus-fill"></i> Añadir al carrito</button>
+			</article>
+
+			<!-- FIN DEL PRODUCTO 4 -->
+
+			<!-- Producto 5 -->
+
+			<article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+				<!-- imagen del producto -->
+				<img class="img-fluid" src="image/productos/producto5.webp"
+					alt="Juego de mesa - DD 5Th Ed. Guia Van Richten Para Ravenloft" />
+
+				<!-- informacion y precio -->
+				<div class="info-producto">
+					<center>
+						<h4>Juego De Mesa - DD 5Th ED. Guia Van Richten Para Ravenloft</h4>
+						<p class="precio">$176.00</p>
+					</center>
+					<!-- boton para añadir al carrito -->
+					<button onclick="addCarrito(event)"  class="btn btn-dark"><i class="bi bi-bag-plus-fill"></i> Añadir al carrito</button>
+			</article>
+			<br>
+
+			<!-- FIN DEL PRODUCTO 5 -->
+
+			<!-- Producto 6 -->
+
+			<article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+				<!-- imagen del producto -->
+				<img class="img-fluid" src="image/productos/producto6.webp"
+					alt="Juegos De Rol D&D Miniature: Spelljammer Adventures In Space" />
+
+				<!-- informacion y precio -->
+				<div class="info-producto">
+					<center>
+						<h4>Juegos De Rol D&D Miniature: Spelljammer Adventures In Space</h4>
+						<p class="precio">$1,040.00</p>
+					</center>
+					<!-- boton para añadir al carrito -->
+					<button onclick="addCarrito(event)"  class="btn btn-dark"><i class="bi bi-bag-plus-fill"></i> Añadir al carrito</button>
+			</article>
+
+			<!-- FIN DEL PRODUCTO 6 -->
+
+			<!-- Producto 7 -->
+
+			<article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+				<!-- imagen del producto -->
+				<img class="img-fluid" src="image/productos/FIFA 23.jpg" alt="FIFA 23" />
+
+				<!-- informacion y precio -->
+				<div class="info-producto">
+					<center>
+						<h4>FIFA 23 <br> Plataforma: <br> PlayStation 5</h4>
+						<p class="precio">$699.00</p>
+					</center>
+					<!-- boton para añadir al carrito -->
+					<button onclick="addCarrito(event)"  class="btn btn-dark"><i class="bi bi-bag-plus-fill"></i> Añadir al carrito</button>
+			</article>
+			<br>
+
+			<!-- FIN DEL PRODUCTO 7 -->
+
+			<!-- Producto 8 -->
+
+			<article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+				<!-- imagen del producto -->
+				<img class="img-fluid" src="image/productos/SF XBX.jpg" alt="Street Fighter" />
+
+				<!-- informacion y precio -->
+				<div class="info-producto">
+					<center>
+						<h4>Street Fighter 6<br> Plataforma: <br> XBSX 5</h4>
+						<p class="precio">$1,399.00</p>
+					</center>
+					<!-- boton para añadir al carrito -->
+					<button onclick="addCarrito(event)"  class="btn btn-dark"><i class="bi bi-bag-plus-fill"></i> Añadir al carrito</button>
+			</article>
+
+			<!-- FIN DEL PRODUCTO 8 -->
+
+			<!-- Producto 9 -->
+
+			<article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+				<!-- imagen del producto -->
+				<img class="img-fluid" src="image/productos/TKOF-XV.jpg" alt="The King of Fighters XV" />
+
+				<!-- informacion y precio -->
+				<div class="info-producto">
+					<center>
+						<h4>The King of Fighters XV S.E.<br> Plataforma: <br>Xbox Series X 5</h4>
+						<p class="precio">$607.50</p>
+					</center>
+					<!-- boton para añadir al carrito -->
+					<button onclick="addCarrito(event)"  class="btn btn-dark"><i class="bi bi-bag-plus-fill"></i> Añadir al carrito</button>
+			</article>
+			<br>
+			<!-- FIN DEL PRODUCTO 9 -->
+
+			<!-- Producto 10 -->
+
+			<article class="col-xs-12 col-sm-6 col-md-4 col-xl-3">
+				<!-- imagen del producto -->
+				<img class="img-fluid" src="image/productos/HPOTTER.jpg" alt="Hogwarts Legacy PS5" />
+
+				<!-- informacion y precio -->
+				<div class="info-producto">
+					<center>
+						<h4>Hogwarts Legacy Plataforma: <br> PS5-Estandar Edition</h4>
+						<br>
+						<p class="precio">$56.44</p>
+					</center>
+					<!-- boton para añadir al carrito -->
+					<button onclick="addCarrito(event)" class="btn btn-dark"><i class="bi bi-bag-plus-fill"></i> Añadir al carrito</button>
+			</article>
+			<br>
+			<!-- FIN DEL PRODUCTO 10 -->
+
+
+		</section>
+		<br>
+		<br>
+
+		<!-- informacion del video -->
+		<div class="info-video">
+			<h2> Proximamente: New Super Mario Bros.™ U Deluxe</h2>
+			<video class="video" src="Video/Super Mario B.mp4" controls>
+			</video>
+			<br>
+			<br>
+			<br>
+			<!-- informacion del video 2 -->
+			<div class="info-video">
+				<h2> Proximamente: LEGO 2K Drive Edición Estándar</h2>
+				<video class="video" src="Video/LEGO 2K Drive.mp4" controls>
+				</video>
+
+
+	</main>
+	<!-- Pie de pagina -->
+	<footer class="container-fluid bg-dark text-white text-capitalize fs-6  p-3">
+		<div class="container p-0">
+			<p class="float-end">
+				<a href="#">volver arriba</a>
+			</p>
+			<p>Creado por Nubia producciones - 2023</p>
+		</div>
+	</footer>
+
+
+	<!-- JavaScript de Bootsrap -->
+	<script src="js/bootstrap.js"></script>
+
+	
+	<!-- Cargar JavaScript Personalizado -->
+	<script src="js/custom.js"></script>
+
+
+
+</body>
+
+</html>
